@@ -1,0 +1,424 @@
+﻿using Microsoft.Data.SqlClient;
+
+namespace KhayelitshaLibraryApp
+{
+    public class MemberForm : Form
+    {
+        private GroupBox grpDetails;
+        private Label lblMemberID;
+        private TextBox txtMemberID;
+        private Label lblFullName;
+        private TextBox txtFullName;
+        private Label lblAddress;
+        private TextBox txtAddress;
+        private Label lblPhone;
+        private TextBox txtPhone;
+        private Label lblJoinDate;
+        private DateTimePicker dtpJoinDate;
+        private Button btnAdd;
+        private Button btnUpdate;
+        private Button btnDelete;
+        private Button btnClear;
+        private Label lblSearch;
+        private TextBox txtSearch;
+        private Button btnSearch;
+        private DataGridView dgvMembers;
+
+        public MemberForm()
+        {
+            InitializeComponent();
+            dtpJoinDate.Value = DateTime.Today;
+            LoadMembers();
+        }
+
+        private void InitializeComponent()
+        {
+            grpDetails = new GroupBox();
+            lblMemberID = new Label();
+            txtMemberID = new TextBox();
+            lblFullName = new Label();
+            txtFullName = new TextBox();
+            lblAddress = new Label();
+            txtAddress = new TextBox();
+            lblPhone = new Label();
+            txtPhone = new TextBox();
+            lblJoinDate = new Label();
+            dtpJoinDate = new DateTimePicker();
+            btnAdd = new Button();
+            btnUpdate = new Button();
+            btnDelete = new Button();
+            btnClear = new Button();
+            lblSearch = new Label();
+            txtSearch = new TextBox();
+            btnSearch = new Button();
+            dgvMembers = new DataGridView();
+            grpDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvMembers).BeginInit();
+            SuspendLayout();
+
+            grpDetails.Controls.Add(lblMemberID);
+            grpDetails.Controls.Add(txtMemberID);
+            grpDetails.Controls.Add(lblFullName);
+            grpDetails.Controls.Add(txtFullName);
+            grpDetails.Controls.Add(lblAddress);
+            grpDetails.Controls.Add(txtAddress);
+            grpDetails.Controls.Add(lblPhone);
+            grpDetails.Controls.Add(txtPhone);
+            grpDetails.Controls.Add(lblJoinDate);
+            grpDetails.Controls.Add(dtpJoinDate);
+            grpDetails.Controls.Add(btnAdd);
+            grpDetails.Controls.Add(btnUpdate);
+            grpDetails.Controls.Add(btnDelete);
+            grpDetails.Controls.Add(btnClear);
+            grpDetails.Controls.Add(lblSearch);
+            grpDetails.Controls.Add(txtSearch);
+            grpDetails.Controls.Add(btnSearch);
+            grpDetails.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            grpDetails.Location = new Point(12, 12);
+            grpDetails.Name = "grpDetails";
+            grpDetails.Size = new Size(860, 160);
+            grpDetails.TabIndex = 0;
+            grpDetails.TabStop = false;
+            grpDetails.Text = "Member Details";
+
+            lblMemberID.AutoSize = true;
+            lblMemberID.Font = new Font("Segoe UI", 9F);
+            lblMemberID.Location = new Point(16, 30);
+            lblMemberID.Text = "Member ID:";
+
+            txtMemberID.Font = new Font("Segoe UI", 9F);
+            txtMemberID.Location = new Point(100, 27);
+            txtMemberID.ReadOnly = true;
+            txtMemberID.Size = new Size(80, 23);
+
+            lblFullName.AutoSize = true;
+            lblFullName.Font = new Font("Segoe UI", 9F);
+            lblFullName.Location = new Point(200, 30);
+            lblFullName.Text = "Full Name:";
+
+            txtFullName.Font = new Font("Segoe UI", 9F);
+            txtFullName.Location = new Point(280, 27);
+            txtFullName.Size = new Size(200, 23);
+
+            lblAddress.AutoSize = true;
+            lblAddress.Font = new Font("Segoe UI", 9F);
+            lblAddress.Location = new Point(500, 30);
+            lblAddress.Text = "Address:";
+
+            txtAddress.Font = new Font("Segoe UI", 9F);
+            txtAddress.Location = new Point(565, 27);
+            txtAddress.Size = new Size(270, 23);
+
+            lblPhone.AutoSize = true;
+            lblPhone.Font = new Font("Segoe UI", 9F);
+            lblPhone.Location = new Point(16, 68);
+            lblPhone.Text = "Phone:";
+
+            txtPhone.Font = new Font("Segoe UI", 9F);
+            txtPhone.Location = new Point(100, 65);
+            txtPhone.Size = new Size(150, 23);
+
+            lblJoinDate.AutoSize = true;
+            lblJoinDate.Font = new Font("Segoe UI", 9F);
+            lblJoinDate.Location = new Point(270, 68);
+            lblJoinDate.Text = "Join Date:";
+
+            dtpJoinDate.Font = new Font("Segoe UI", 9F);
+            dtpJoinDate.Format = DateTimePickerFormat.Short;
+            dtpJoinDate.Location = new Point(345, 65);
+            dtpJoinDate.Size = new Size(120, 23);
+
+            btnAdd.BackColor = Color.FromArgb(46, 204, 113);
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.Font = new Font("Segoe UI", 9F);
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Location = new Point(16, 110);
+            btnAdd.Size = new Size(80, 32);
+            btnAdd.Text = "Add";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
+
+            btnUpdate.BackColor = Color.FromArgb(52, 152, 219);
+            btnUpdate.FlatStyle = FlatStyle.Flat;
+            btnUpdate.Font = new Font("Segoe UI", 9F);
+            btnUpdate.ForeColor = Color.White;
+            btnUpdate.Location = new Point(106, 110);
+            btnUpdate.Size = new Size(80, 32);
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
+
+            btnDelete.BackColor = Color.FromArgb(231, 76, 60);
+            btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.Font = new Font("Segoe UI", 9F);
+            btnDelete.ForeColor = Color.White;
+            btnDelete.Location = new Point(196, 110);
+            btnDelete.Size = new Size(80, 32);
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
+
+            btnClear.BackColor = Color.FromArgb(149, 165, 166);
+            btnClear.FlatStyle = FlatStyle.Flat;
+            btnClear.Font = new Font("Segoe UI", 9F);
+            btnClear.ForeColor = Color.White;
+            btnClear.Location = new Point(286, 110);
+            btnClear.Size = new Size(80, 32);
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
+
+            lblSearch.AutoSize = true;
+            lblSearch.Font = new Font("Segoe UI", 9F);
+            lblSearch.Location = new Point(500, 68);
+            lblSearch.Text = "Search (Name / ID):";
+
+            txtSearch.Font = new Font("Segoe UI", 9F);
+            txtSearch.Location = new Point(565, 65);
+            txtSearch.Size = new Size(200, 23);
+
+            btnSearch.BackColor = Color.FromArgb(155, 89, 182);
+            btnSearch.FlatStyle = FlatStyle.Flat;
+            btnSearch.Font = new Font("Segoe UI", 9F);
+            btnSearch.ForeColor = Color.White;
+            btnSearch.Location = new Point(775, 62);
+            btnSearch.Size = new Size(60, 28);
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
+
+            dgvMembers.AllowUserToAddRows = false;
+            dgvMembers.AllowUserToDeleteRows = false;
+            dgvMembers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvMembers.BackgroundColor = Color.White;
+            dgvMembers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMembers.Location = new Point(12, 185);
+            dgvMembers.MultiSelect = false;
+            dgvMembers.Name = "dgvMembers";
+            dgvMembers.ReadOnly = true;
+            dgvMembers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvMembers.Size = new Size(860, 320);
+            dgvMembers.TabIndex = 1;
+            dgvMembers.CellClick += dgvMembers_CellClick;
+            UiStyles.StyleGrid(dgvMembers);
+
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(245, 246, 250);
+            ClientSize = new Size(884, 521);
+            Controls.Add(dgvMembers);
+            Controls.Add(grpDetails);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            Name = "MemberForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Member Management";
+            grpDetails.ResumeLayout(false);
+            grpDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvMembers).EndInit();
+            ResumeLayout(false);
+        }
+
+        private void LoadMembers(string? searchTerm = null)
+        {
+            try
+            {
+                string query = searchTerm == null
+                    ? "SELECT MemberID, FullName, Address, Phone, JoinDate FROM Member ORDER BY MemberID"
+                    : @"SELECT MemberID, FullName, Address, Phone, JoinDate FROM Member
+                        WHERE FullName LIKE @Search OR Phone LIKE @Search OR Address LIKE @Search
+                           OR CAST(MemberID AS VARCHAR) LIKE @Search
+                        ORDER BY MemberID";
+
+                var parameters = searchTerm == null
+                    ? Array.Empty<SqlParameter>()
+                    : new[] { new SqlParameter("@Search", $"%{searchTerm}%") };
+
+                dgvMembers.DataSource = DatabaseHelper.ExecuteQuery(query, parameters);
+                dgvMembers.Columns["MemberID"]!.HeaderText = "Member ID";
+                dgvMembers.Columns["FullName"]!.HeaderText = "Full Name";
+                dgvMembers.Columns["JoinDate"]!.HeaderText = "Join Date";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading members: {ex.Message}", "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvMembers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            var row = dgvMembers.Rows[e.RowIndex];
+            txtMemberID.Text = row.Cells["MemberID"].Value?.ToString();
+            txtFullName.Text = row.Cells["FullName"].Value?.ToString();
+            txtAddress.Text = row.Cells["Address"].Value?.ToString();
+            txtPhone.Text = row.Cells["Phone"].Value?.ToString();
+
+            if (DateTime.TryParse(row.Cells["JoinDate"].Value?.ToString(), out var joinDate))
+                dtpJoinDate.Value = joinDate;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (!ValidateInput()) return;
+
+            try
+            {
+                const string query = @"INSERT INTO Member (FullName, Address, Phone, JoinDate)
+                                       VALUES (@FullName, @Address, @Phone, @JoinDate)";
+                DatabaseHelper.ExecuteNonQuery(query,
+                    new SqlParameter("@FullName", txtFullName.Text.Trim()),
+                    new SqlParameter("@Address", txtAddress.Text.Trim()),
+                    new SqlParameter("@Phone", txtPhone.Text.Trim()),
+                    new SqlParameter("@JoinDate", dtpJoinDate.Value.Date));
+
+                MessageBox.Show("Member added successfully.", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearFields();
+                LoadMembers();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error adding member: {ex.Message}", "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtMemberID.Text))
+            {
+                MessageBox.Show("Select a member to update.", "Validation",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!ValidateInput()) return;
+
+            try
+            {
+                const string query = @"UPDATE Member SET FullName = @FullName, Address = @Address,
+                                       Phone = @Phone, JoinDate = @JoinDate WHERE MemberID = @MemberID";
+                int rows = DatabaseHelper.ExecuteNonQuery(query,
+                    new SqlParameter("@FullName", txtFullName.Text.Trim()),
+                    new SqlParameter("@Address", txtAddress.Text.Trim()),
+                    new SqlParameter("@Phone", txtPhone.Text.Trim()),
+                    new SqlParameter("@JoinDate", dtpJoinDate.Value.Date),
+                    new SqlParameter("@MemberID", int.Parse(txtMemberID.Text)));
+
+                if (rows > 0)
+                {
+                    MessageBox.Show("Member updated successfully.", "Success",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearFields();
+                    LoadMembers();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating member: {ex.Message}", "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtMemberID.Text))
+            {
+                MessageBox.Show("Select a member to delete.", "Validation",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var confirm = MessageBox.Show("Are you sure you want to delete this member?",
+                "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confirm != DialogResult.Yes) return;
+
+            int memberId = int.Parse(txtMemberID.Text);
+            if (DatabaseHelper.MemberHasLoans(memberId))
+            {
+                MessageBox.Show(
+                    "This member cannot be deleted because they have loan records.\n" +
+                    "Members with any loan history are protected by referential integrity.",
+                    "Delete Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                const string query = "DELETE FROM Member WHERE MemberID = @MemberID";
+                DatabaseHelper.ExecuteNonQuery(query,
+                    new SqlParameter("@MemberID", memberId));
+
+                MessageBox.Show("Member deleted successfully.", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearFields();
+                LoadMembers();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error deleting member: {ex.Message}",
+                    "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e) => ClearFields();
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            LoadMembers(string.IsNullOrWhiteSpace(txtSearch.Text) ? null : txtSearch.Text.Trim());
+        }
+
+        private void ClearFields()
+        {
+            txtMemberID.Clear();
+            txtFullName.Clear();
+            txtAddress.Clear();
+            txtPhone.Clear();
+            dtpJoinDate.Value = DateTime.Today;
+            txtSearch.Clear();
+        }
+
+        private bool ValidateInput()
+        {
+            if (string.IsNullOrWhiteSpace(txtFullName.Text))
+            {
+                MessageBox.Show("Full Name is required.", "Validation",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtAddress.Text))
+            {
+                MessageBox.Show("Address is required.", "Validation",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtPhone.Text) || txtPhone.Text.Trim().Length < 10)
+            {
+                MessageBox.Show("Phone must be at least 10 characters.", "Validation",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!txtPhone.Text.Trim().All(char.IsDigit))
+            {
+                MessageBox.Show("Phone must contain digits only.", "Validation",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (dtpJoinDate.Value.Date > DateTime.Today)
+            {
+                MessageBox.Show("Join date cannot be in the future.", "Validation",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
+    }
+}

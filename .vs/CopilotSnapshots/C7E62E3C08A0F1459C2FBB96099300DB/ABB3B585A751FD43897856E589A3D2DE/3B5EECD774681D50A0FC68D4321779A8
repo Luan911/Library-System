@@ -1,0 +1,25 @@
+﻿namespace KhayelitshaLibraryApp
+{
+    internal static class Program
+    {
+        [STAThread]
+        static void Main()
+        {
+            ApplicationConfiguration.Initialize();
+
+            if (!DatabaseHelper.TestConnection(out string error))
+            {
+                MessageBox.Show(
+                    "Could not connect to the library database.\n\n" +
+                    error + "\n\n" +
+                    "Please ensure SQL Server LocalDB is running and that you have executed " +
+                    "Khayelitsha_Community_Library_DB.sql (or run the SetupDatabase project).",
+                    "Database Connection Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+
+            Application.Run(new MainForm());
+        }
+    }
+}

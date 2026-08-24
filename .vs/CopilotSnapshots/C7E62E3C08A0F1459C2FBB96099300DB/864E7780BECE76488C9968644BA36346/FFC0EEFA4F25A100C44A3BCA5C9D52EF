@@ -1,0 +1,188 @@
+﻿namespace KhayelitshaLibraryApp
+{
+    public class ReportsForm : Form
+    {
+        private Label lblSummary;
+        private FlowLayoutPanel flowReports;
+        private Button btnOverdue;
+        private Button btnActiveLoans;
+        private Button btnAvailableBooks;
+        private Button btnMemberList;
+        private Button btnLoansPerMember;
+        private Label lblReportTitle;
+        private DataGridView dgvReport;
+
+        public ReportsForm()
+        {
+            InitializeComponent();
+            // Don't execute DB code in the designer. Defer to runtime Load event.
+            this.Load += ReportsForm_Load;
+        }
+
+        private void ReportsForm_Load(object? sender, EventArgs e)
+        {
+            if (System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime)
+                return;
+
+            LoadSummary();
+        }
+
+        private void InitializeComponent()
+        {
+            lblSummary = new Label();
+            flowReports = new FlowLayoutPanel();
+            btnOverdue = new Button();
+            btnActiveLoans = new Button();
+            btnAvailableBooks = new Button();
+            btnMemberList = new Button();
+            btnLoansPerMember = new Button();
+            lblReportTitle = new Label();
+            dgvReport = new DataGridView();
+            var layout = new TableLayoutPanel();
+
+            layout.ColumnCount = 1;
+            layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            layout.Dock = DockStyle.Fill;
+            layout.Padding = new Padding(16);
+            layout.RowCount = 4;
+            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 48F));
+            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 52F));
+            layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
+            layout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+
+            lblSummary.AutoSize = true;
+            lblSummary.Dock = DockStyle.Fill;
+            lblSummary.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblSummary.ForeColor = Color.FromArgb(41, 53, 65);
+            lblSummary.Text = "Loading summary...";
+
+            flowReports.Dock = DockStyle.Fill;
+            flowReports.WrapContents = true;
+
+            UiStyles.StyleActionButton(btnOverdue, "Overdue Loans", Color.FromArgb(231, 76, 60), 130);
+            btnOverdue.Click += btnOverdue_Click;
+            UiStyles.StyleActionButton(btnActiveLoans, "Active Loans", Color.FromArgb(155, 89, 182), 130);
+            btnActiveLoans.Click += btnActiveLoans_Click;
+            UiStyles.StyleActionButton(btnAvailableBooks, "Available Books", Color.FromArgb(46, 204, 113), 140);
+            btnAvailableBooks.Click += btnAvailableBooks_Click;
+            UiStyles.StyleActionButton(btnMemberList, "Member List", Color.FromArgb(52, 152, 219), 120);
+            btnMemberList.Click += btnMemberList_Click;
+            UiStyles.StyleActionButton(btnLoansPerMember, "Loans per Member", Color.FromArgb(230, 126, 34), 150);
+            btnLoansPerMember.Click += btnLoansPerMember_Click;
+
+            flowReports.Controls.Add(btnOverdue);
+            flowReports.Controls.Add(btnActiveLoans);
+            flowReports.Controls.Add(btnAvailableBooks);
+            flowReports.Controls.Add(btnMemberList);
+            flowReports.Controls.Add(btnLoansPerMember);
+
+            lblReportTitle.AutoSize = true;
+            lblReportTitle.Dock = DockStyle.Fill;
+            lblReportTitle.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblReportTitle.Text = "Select a report above";
+
+            UiStyles.StyleGrid(dgvReport);
+            dgvReport.Dock = DockStyle.Fill;
+
+            layout.Controls.Add(lblSummary, 0, 0);
+            layout.Controls.Add(flowReports, 0, 1);
+            layout.Controls.Add(lblReportTitle, 0, 2);
+            layout.Controls.Add(dgvReport, 0, 3);
+
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(245, 246, 250);
+            ClientSize = new Size(980, 580);
+            Controls.Add(layout);
+            MinimumSize = new Size(860, 500);
+            Name = "ReportsForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Library Reports";
+        }
+
+        private void LoadSummary()
+        {
+            try
+            {
+                var memberCount = DatabaseHelper.ExecuteScalar("SELECT COUNT(*) FROM Member");
+                var titleCount = DatabaseHelper.ExecuteScalar("SELECT COUNT(*) FROM BookTitle");
+                var copyCount = DatabaseHelper.ExecuteScalar("SELECT COUNT(*) FROM BookCopy");
+                var availableCount = DatabaseHelper.ExecuteScalar(
+                    "SELECT COUNT(*) FROM BookCopy WHERE Status = 'Available'");
+                var activeLoans = DatabaseHelper.ExecuteScalar(
+                    "SELECT COUNT(*) FROM Loan WHERE ReturnDate IS NULL");
+                var overdueLoans = DatabaseHelper.ExecuteScalar(
+                    "SELECT COUNT(*) FROM Loan WHERE ReturnDate IS NULL AND DueDate < CAST(GETDATE() AS DATE)");
+
+                lblSummary.Text =
+                    $"Members: {memberCount}  |  Titles: {titleCount}  |  Copies: {copyCount}  |  " +
+                    $"Available: {availableCount}  |  Active Loans: {activeLoans}  |  Overdue: {overdueLoans}";
+            }
+            catch (Exception ex)
+            {
+                lblSummary.Text = $"Unable to load summary: {ex.Message}";
+            }
+        }
+
+        private void btnOverdue_Click(object sender, EventArgs e) => LoadReport(
+            @"SELECT m.FullName AS Member, bt.Title AS BookTitle, l.LoanDate, l.DueDate,
+                     DATEDIFF(DAY, l.DueDate, GETDATE()) AS DaysOverdue
+              FROM Loan l
+              INNER JOIN Member m ON l.MemberID = m.MemberID
+              INNER JOIN BookCopy bc ON l.CopyID = bc.CopyID
+              INNER JOIN BookTitle bt ON bc.TitleID = bt.TitleID
+              WHERE l.ReturnDate IS NULL AND l.DueDate < CAST(GETDATE() AS DATE)
+              ORDER BY l.DueDate",
+            "Overdue Loans Report");
+
+        private void btnActiveLoans_Click(object sender, EventArgs e) => LoadReport(
+            @"SELECT l.LoanID, m.FullName AS Member, bt.Title AS Book, s.FullName AS Staff,
+                     l.LoanDate, l.DueDate
+              FROM Loan l
+              INNER JOIN Member m ON l.MemberID = m.MemberID
+              INNER JOIN BookCopy bc ON l.CopyID = bc.CopyID
+              INNER JOIN BookTitle bt ON bc.TitleID = bt.TitleID
+              INNER JOIN Staff s ON l.StaffID = s.StaffID
+              WHERE l.ReturnDate IS NULL
+              ORDER BY l.DueDate",
+            "Active Loans Report");
+
+        private void btnAvailableBooks_Click(object sender, EventArgs e) => LoadReport(
+            @"SELECT bt.Title, bt.Author, bt.ISBN, bc.CopyID, bc.Status
+              FROM BookCopy bc
+              INNER JOIN BookTitle bt ON bc.TitleID = bt.TitleID
+              WHERE bc.Status = 'Available'
+              ORDER BY bt.Title, bc.CopyID",
+            "Available Books Report");
+
+        private void btnMemberList_Click(object sender, EventArgs e) => LoadReport(
+            "SELECT MemberID, FullName, Address, Phone, JoinDate FROM Member ORDER BY FullName",
+            "Member List Report");
+
+        private void btnLoansPerMember_Click(object sender, EventArgs e) => LoadReport(
+            @"SELECT m.MemberID, m.FullName AS Member,
+                     COUNT(l.LoanID) AS TotalLoans,
+                     SUM(CASE WHEN l.ReturnDate IS NULL THEN 1 ELSE 0 END) AS ActiveLoans,
+                     SUM(CASE WHEN l.ReturnDate IS NOT NULL THEN 1 ELSE 0 END) AS ReturnedLoans
+              FROM Member m
+              LEFT JOIN Loan l ON m.MemberID = l.MemberID
+              GROUP BY m.MemberID, m.FullName
+              ORDER BY TotalLoans DESC, m.FullName",
+            "Loans per Member (GROUP BY)");
+
+        private void LoadReport(string query, string title)
+        {
+            try
+            {
+                dgvReport.DataSource = DatabaseHelper.ExecuteQuery(query);
+                lblReportTitle.Text = title;
+                LoadSummary();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading report: {ex.Message}", "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    }
+}

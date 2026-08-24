@@ -1,0 +1,535 @@
+﻿using Microsoft.Data.SqlClient;
+
+namespace KhayelitshaLibraryApp
+{
+    public class LoanForm : Form
+    {
+        private GroupBox grpIssue;
+        private TableLayoutPanel layoutIssue;
+        private TableLayoutPanel layoutMain;
+        private Label lblMember;
+        private ComboBox cboMember;
+        private Label lblCopy;
+        private ComboBox cboCopy;
+        private Label lblStaff;
+        private ComboBox cboStaff;
+        private Label lblLoanDate;
+        private DateTimePicker dtpLoanDate;
+        private Label lblDueDate;
+        private DateTimePicker dtpDueDate;
+        private Button btnIssue;
+        private Button btnReturn;
+        private Button btnRefresh;
+        private GroupBox grpCurrent;
+        private DataGridView dgvCurrentLoans;
+        private GroupBox grpHistory;
+        private DataGridView dgvHistoricalLoans;
+        private FlowLayoutPanel flowLoanFilters;
+        private Button btnFilterActive;
+        private Button btnFilterReturned;
+        private Button btnFilterOverdue;
+        private Button btnFilterAll;
+        private string _loanFilter = "Returned";
+
+        public LoanForm()
+        {
+            InitializeComponent();
+            dtpLoanDate.Value = DateTime.Today;
+            dtpDueDate.Value = DateTime.Today.AddDays(14);
+            // Defer loading runtime data to the Load event so the designer doesn't execute DB code.
+            this.Load += LoanForm_Load;
+        }
+
+        private void LoanForm_Load(object? sender, EventArgs e)
+        {
+            if (System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime)
+                return;
+
+            LoadComboBoxes();
+            LoadCurrentLoans();
+            LoadHistoricalLoans();
+        }
+
+        private void InitializeComponent()
+        {
+            grpIssue = new GroupBox();
+            layoutMain = new TableLayoutPanel();
+            layoutIssue = new TableLayoutPanel();
+            lblMember = new Label();
+            cboMember = new ComboBox();
+            lblCopy = new Label();
+            cboCopy = new ComboBox();
+            lblStaff = new Label();
+            cboStaff = new ComboBox();
+            lblLoanDate = new Label();
+            dtpLoanDate = new DateTimePicker();
+            lblDueDate = new Label();
+            dtpDueDate = new DateTimePicker();
+            btnIssue = new Button();
+            btnReturn = new Button();
+            btnRefresh = new Button();
+            grpCurrent = new GroupBox();
+            dgvCurrentLoans = new DataGridView();
+            grpHistory = new GroupBox();
+            dgvHistoricalLoans = new DataGridView();
+            flowLoanFilters = new FlowLayoutPanel();
+            btnFilterActive = new Button();
+            btnFilterReturned = new Button();
+            btnFilterOverdue = new Button();
+            btnFilterAll = new Button();
+            layoutMain.SuspendLayout();
+            grpIssue.SuspendLayout();
+            layoutIssue.SuspendLayout();
+            grpCurrent.SuspendLayout();
+            grpHistory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvCurrentLoans).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvHistoricalLoans).BeginInit();
+            SuspendLayout();
+
+            // —— Main layout: issue bar + current loans + history ——
+            layoutMain.ColumnCount = 1;
+            layoutMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            layoutMain.Controls.Add(grpIssue, 0, 0);
+            layoutMain.Controls.Add(grpCurrent, 0, 1);
+            layoutMain.Controls.Add(grpHistory, 0, 2);
+            layoutMain.Dock = DockStyle.Fill;
+            layoutMain.Padding = new Padding(12);
+            layoutMain.RowCount = 3;
+            layoutMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 132F));
+            layoutMain.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            layoutMain.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+
+            grpIssue.Dock = DockStyle.Fill;
+            grpIssue.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            grpIssue.Padding = new Padding(12, 8, 12, 8);
+            grpIssue.Text = "Issue / Return Book";
+            grpIssue.Controls.Add(layoutIssue);
+
+            layoutIssue.ColumnCount = 6;
+            layoutIssue.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 88F));
+            layoutIssue.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 28F));
+            layoutIssue.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 88F));
+            layoutIssue.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 34F));
+            layoutIssue.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 52F));
+            layoutIssue.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 38F));
+            layoutIssue.Dock = DockStyle.Fill;
+            layoutIssue.RowCount = 3;
+            layoutIssue.RowStyles.Add(new RowStyle(SizeType.Absolute, 36F));
+            layoutIssue.RowStyles.Add(new RowStyle(SizeType.Absolute, 36F));
+            layoutIssue.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+
+            lblMember.Anchor = AnchorStyles.Left;
+            lblMember.AutoSize = true;
+            lblMember.Font = new Font("Segoe UI", 9F);
+            lblMember.Text = "Member:";
+            lblMember.TextAlign = ContentAlignment.MiddleLeft;
+
+            cboMember.Dock = DockStyle.Fill;
+            cboMember.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboMember.Font = new Font("Segoe UI", 9F);
+            cboMember.Margin = new Padding(0, 6, 8, 6);
+
+            lblCopy.Anchor = AnchorStyles.Left;
+            lblCopy.AutoSize = true;
+            lblCopy.Font = new Font("Segoe UI", 9F);
+            lblCopy.Text = "Book Copy:";
+            lblCopy.TextAlign = ContentAlignment.MiddleLeft;
+
+            cboCopy.Dock = DockStyle.Fill;
+            cboCopy.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboCopy.Font = new Font("Segoe UI", 9F);
+            cboCopy.Margin = new Padding(0, 6, 8, 6);
+
+            lblStaff.Anchor = AnchorStyles.Left;
+            lblStaff.AutoSize = true;
+            lblStaff.Font = new Font("Segoe UI", 9F);
+            lblStaff.Text = "Staff:";
+            lblStaff.TextAlign = ContentAlignment.MiddleLeft;
+
+            cboStaff.Dock = DockStyle.Fill;
+            cboStaff.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboStaff.Font = new Font("Segoe UI", 9F);
+            cboStaff.Margin = new Padding(0, 6, 0, 6);
+
+            lblLoanDate.Anchor = AnchorStyles.Left;
+            lblLoanDate.AutoSize = true;
+            lblLoanDate.Font = new Font("Segoe UI", 9F);
+            lblLoanDate.Text = "Loan Date:";
+            lblLoanDate.TextAlign = ContentAlignment.MiddleLeft;
+
+            dtpLoanDate.Dock = DockStyle.Fill;
+            dtpLoanDate.Font = new Font("Segoe UI", 9F);
+            dtpLoanDate.Format = DateTimePickerFormat.Short;
+            dtpLoanDate.Margin = new Padding(0, 6, 8, 6);
+
+            lblDueDate.Anchor = AnchorStyles.Left;
+            lblDueDate.AutoSize = true;
+            lblDueDate.Font = new Font("Segoe UI", 9F);
+            lblDueDate.Text = "Due Date:";
+            lblDueDate.TextAlign = ContentAlignment.MiddleLeft;
+
+            dtpDueDate.Dock = DockStyle.Fill;
+            dtpDueDate.Font = new Font("Segoe UI", 9F);
+            dtpDueDate.Format = DateTimePickerFormat.Short;
+            dtpDueDate.Margin = new Padding(0, 6, 8, 6);
+
+            ConfigureActionButton(btnIssue, "Issue Book", Color.FromArgb(46, 204, 113));
+            btnIssue.Click += btnIssue_Click;
+            ConfigureActionButton(btnReturn, "Return Book", Color.FromArgb(52, 152, 219));
+            btnReturn.Click += btnReturn_Click;
+            ConfigureActionButton(btnRefresh, "Refresh", Color.FromArgb(149, 165, 166), 90);
+            btnRefresh.Click += btnRefresh_Click;
+
+            var buttonPanel = new FlowLayoutPanel
+            {
+                Dock = DockStyle.Fill,
+                FlowDirection = FlowDirection.LeftToRight,
+                WrapContents = false,
+                Padding = new Padding(0, 4, 0, 0)
+            };
+            buttonPanel.Controls.Add(btnIssue);
+            buttonPanel.Controls.Add(btnReturn);
+            buttonPanel.Controls.Add(btnRefresh);
+
+            layoutIssue.Controls.Add(lblMember, 0, 0);
+            layoutIssue.Controls.Add(cboMember, 1, 0);
+            layoutIssue.Controls.Add(lblCopy, 2, 0);
+            layoutIssue.Controls.Add(cboCopy, 3, 0);
+            layoutIssue.Controls.Add(lblStaff, 4, 0);
+            layoutIssue.Controls.Add(cboStaff, 5, 0);
+            layoutIssue.Controls.Add(lblLoanDate, 0, 1);
+            layoutIssue.Controls.Add(dtpLoanDate, 1, 1);
+            layoutIssue.Controls.Add(lblDueDate, 2, 1);
+            layoutIssue.Controls.Add(dtpDueDate, 3, 1);
+            layoutIssue.Controls.Add(buttonPanel, 4, 1);
+            layoutIssue.SetColumnSpan(buttonPanel, 2);
+
+            grpCurrent.Dock = DockStyle.Fill;
+            grpCurrent.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            grpCurrent.Padding = new Padding(10, 6, 10, 10);
+            grpCurrent.Text = "Current Loans";
+            grpCurrent.Margin = new Padding(0, 8, 0, 4);
+            grpCurrent.Controls.Add(dgvCurrentLoans);
+            UiStyles.StyleGrid(dgvCurrentLoans);
+
+            UiStyles.StyleFilterButton(btnFilterActive, "Active", Color.FromArgb(52, 152, 219));
+            btnFilterActive.Click += (_, _) => ApplyLoanFilter("Active");
+            UiStyles.StyleFilterButton(btnFilterReturned, "Returned", Color.FromArgb(46, 204, 113));
+            btnFilterReturned.Click += (_, _) => ApplyLoanFilter("Returned");
+            UiStyles.StyleFilterButton(btnFilterOverdue, "Overdue", Color.FromArgb(231, 76, 60));
+            btnFilterOverdue.Click += (_, _) => ApplyLoanFilter("Overdue");
+            UiStyles.StyleFilterButton(btnFilterAll, "All Loans", Color.FromArgb(155, 89, 182));
+            btnFilterAll.Click += (_, _) => ApplyLoanFilter("All");
+
+            flowLoanFilters.Controls.Add(btnFilterActive);
+            flowLoanFilters.Controls.Add(btnFilterReturned);
+            flowLoanFilters.Controls.Add(btnFilterOverdue);
+            flowLoanFilters.Controls.Add(btnFilterAll);
+            flowLoanFilters.Dock = DockStyle.Top;
+            flowLoanFilters.Height = 38;
+            flowLoanFilters.Padding = new Padding(0, 0, 0, 4);
+
+            grpHistory.Dock = DockStyle.Fill;
+            grpHistory.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            grpHistory.Padding = new Padding(10, 6, 10, 10);
+            grpHistory.Text = "Loan Records (Filtered View)";
+            grpHistory.Margin = new Padding(0, 4, 0, 0);
+            grpHistory.Controls.Add(dgvHistoricalLoans);
+            grpHistory.Controls.Add(flowLoanFilters);
+
+            UiStyles.StyleGrid(dgvHistoricalLoans);
+            dgvHistoricalLoans.Dock = DockStyle.Fill;
+
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(245, 246, 250);
+            ClientSize = new Size(1020, 680);
+            Controls.Add(layoutMain);
+            MinimumSize = new Size(900, 600);
+            Name = "LoanForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Loan and Return Management";
+            layoutMain.ResumeLayout(false);
+            grpIssue.ResumeLayout(false);
+            layoutIssue.ResumeLayout(false);
+            layoutIssue.PerformLayout();
+            grpCurrent.ResumeLayout(false);
+            grpHistory.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvCurrentLoans).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvHistoricalLoans).EndInit();
+            ResumeLayout(false);
+        }
+
+        private static void ConfigureActionButton(Button button, string text, Color backColor, int width = 118)
+        {
+            UiStyles.StyleActionButton(button, text, backColor, width);
+        }
+
+        private void ApplyLoanFilter(string filter)
+        {
+            _loanFilter = filter;
+            grpHistory.Text = filter switch
+            {
+                "Active" => "Loan Records — Active",
+                "Returned" => "Loan Records — Returned",
+                "Overdue" => "Loan Records — Overdue",
+                _ => "Loan Records — All"
+            };
+            LoadFilteredLoans();
+        }
+
+        private void LoadComboBoxes()
+        {
+            try
+            {
+                var members = DatabaseHelper.ExecuteQuery(
+                    "SELECT MemberID, FullName FROM Member ORDER BY FullName");
+                cboMember.DataSource = members;
+                cboMember.DisplayMember = "FullName";
+                cboMember.ValueMember = "MemberID";
+
+                var staff = DatabaseHelper.ExecuteQuery(
+                    "SELECT StaffID, FullName FROM Staff ORDER BY FullName");
+                cboStaff.DataSource = staff;
+                cboStaff.DisplayMember = "FullName";
+                cboStaff.ValueMember = "StaffID";
+
+                LoadAvailableCopies();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading data: {ex.Message}", "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadAvailableCopies()
+        {
+            const string query = @"SELECT bc.CopyID,
+                                          bt.Title + ' (Copy #' + CAST(bc.CopyID AS VARCHAR) + ')' AS CopyDescription
+                                   FROM BookCopy bc
+                                   INNER JOIN BookTitle bt ON bc.TitleID = bt.TitleID
+                                   WHERE bc.Status = 'Available'
+                                   ORDER BY bt.Title, bc.CopyID";
+            var copies = DatabaseHelper.ExecuteQuery(query);
+            cboCopy.DataSource = copies;
+            cboCopy.DisplayMember = "CopyDescription";
+            cboCopy.ValueMember = "CopyID";
+        }
+
+        private void LoadCurrentLoans()
+        {
+            try
+            {
+                const string query = @"SELECT l.LoanID, m.FullName AS Member, bt.Title AS Book,
+                                              bc.CopyID, s.FullName AS Staff,
+                                              l.LoanDate, l.DueDate
+                                       FROM Loan l
+                                       INNER JOIN Member m ON l.MemberID = m.MemberID
+                                       INNER JOIN BookCopy bc ON l.CopyID = bc.CopyID
+                                       INNER JOIN BookTitle bt ON bc.TitleID = bt.TitleID
+                                       INNER JOIN Staff s ON l.StaffID = s.StaffID
+                                       WHERE l.ReturnDate IS NULL
+                                       ORDER BY l.DueDate";
+                dgvCurrentLoans.DataSource = DatabaseHelper.ExecuteQuery(query);
+                ApplyLoanGridColumns(dgvCurrentLoans, includeReturnDate: false);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading current loans: {ex.Message}", "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadFilteredLoans()
+        {
+            try
+            {
+                string query = _loanFilter switch
+                {
+                    "Active" => @"SELECT l.LoanID, m.FullName AS Member, bt.Title AS Book,
+                                         bc.CopyID, s.FullName AS Staff, l.LoanDate, l.DueDate, l.ReturnDate
+                                  FROM Loan l
+                                  INNER JOIN Member m ON l.MemberID = m.MemberID
+                                  INNER JOIN BookCopy bc ON l.CopyID = bc.CopyID
+                                  INNER JOIN BookTitle bt ON bc.TitleID = bt.TitleID
+                                  INNER JOIN Staff s ON l.StaffID = s.StaffID
+                                  WHERE l.ReturnDate IS NULL
+                                  ORDER BY l.DueDate",
+                    "Overdue" => @"SELECT l.LoanID, m.FullName AS Member, bt.Title AS Book,
+                                          bc.CopyID, s.FullName AS Staff, l.LoanDate, l.DueDate, l.ReturnDate
+                                   FROM Loan l
+                                   INNER JOIN Member m ON l.MemberID = m.MemberID
+                                   INNER JOIN BookCopy bc ON l.CopyID = bc.CopyID
+                                   INNER JOIN BookTitle bt ON bc.TitleID = bt.TitleID
+                                   INNER JOIN Staff s ON l.StaffID = s.StaffID
+                                   WHERE l.ReturnDate IS NULL AND l.DueDate < CAST(GETDATE() AS DATE)
+                                   ORDER BY l.DueDate",
+                    "All" => @"SELECT l.LoanID, m.FullName AS Member, bt.Title AS Book,
+                                      bc.CopyID, s.FullName AS Staff, l.LoanDate, l.DueDate, l.ReturnDate
+                               FROM Loan l
+                               INNER JOIN Member m ON l.MemberID = m.MemberID
+                               INNER JOIN BookCopy bc ON l.CopyID = bc.CopyID
+                               INNER JOIN BookTitle bt ON bc.TitleID = bt.TitleID
+                               INNER JOIN Staff s ON l.StaffID = s.StaffID
+                               ORDER BY l.LoanDate DESC",
+                    _ => @"SELECT l.LoanID, m.FullName AS Member, bt.Title AS Book,
+                                  bc.CopyID, s.FullName AS Staff, l.LoanDate, l.DueDate, l.ReturnDate
+                           FROM Loan l
+                           INNER JOIN Member m ON l.MemberID = m.MemberID
+                           INNER JOIN BookCopy bc ON l.CopyID = bc.CopyID
+                           INNER JOIN BookTitle bt ON bc.TitleID = bt.TitleID
+                           INNER JOIN Staff s ON l.StaffID = s.StaffID
+                           WHERE l.ReturnDate IS NOT NULL
+                           ORDER BY l.ReturnDate DESC"
+                };
+
+                dgvHistoricalLoans.DataSource = DatabaseHelper.ExecuteQuery(query);
+                ApplyLoanGridColumns(dgvHistoricalLoans, includeReturnDate: true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading loans: {ex.Message}", "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadHistoricalLoans() => LoadFilteredLoans();
+
+        private static void ApplyLoanGridColumns(DataGridView grid, bool includeReturnDate)
+        {
+            if (grid.Columns.Count == 0) return;
+
+            SetColumn(grid, "LoanID", "Loan ID", 70);
+            SetColumn(grid, "Member", "Member", 140);
+            SetColumn(grid, "Book", "Book", 200);
+            SetColumn(grid, "CopyID", "Copy ID", 70);
+            SetColumn(grid, "Staff", "Staff", 120);
+            SetColumn(grid, "LoanDate", "Loan Date", 90);
+            SetColumn(grid, "DueDate", "Due Date", 90);
+            if (includeReturnDate)
+                SetColumn(grid, "ReturnDate", "Return Date", 95);
+        }
+
+        private static void SetColumn(DataGridView grid, string name, string header, int fillWeight)
+        {
+            if (!grid.Columns.Contains(name)) return;
+            var col = grid.Columns[name];
+            col.HeaderText = header;
+            col.FillWeight = fillWeight;
+            col.MinimumWidth = 60;
+        }
+
+        private void btnIssue_Click(object sender, EventArgs e)
+        {
+            if (cboMember.SelectedValue == null || cboCopy.SelectedValue == null || cboStaff.SelectedValue == null)
+            {
+                MessageBox.Show("Select a member, available book copy, and staff member.",
+                    "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (dtpDueDate.Value.Date < dtpLoanDate.Value.Date)
+            {
+                MessageBox.Show("Due date cannot be before loan date.", "Validation",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                int copyId = Convert.ToInt32(cboCopy.SelectedValue);
+                int memberId = Convert.ToInt32(cboMember.SelectedValue);
+                int staffId = Convert.ToInt32(cboStaff.SelectedValue);
+                var loanDate = dtpLoanDate.Value.Date;
+                var dueDate = dtpDueDate.Value.Date;
+
+                DatabaseHelper.ExecuteTransaction((conn, trans) =>
+                {
+                    var status = DatabaseHelper.ExecuteScalar(conn, trans,
+                        "SELECT Status FROM BookCopy WHERE CopyID = @CopyID",
+                        new SqlParameter("@CopyID", copyId))?.ToString();
+
+                    if (status != "Available")
+                        throw new InvalidOperationException("This book copy is not available for loan.");
+
+                    DatabaseHelper.ExecuteNonQuery(conn, trans,
+                        @"INSERT INTO Loan (MemberID, CopyID, StaffID, LoanDate, DueDate)
+                          VALUES (@MemberID, @CopyID, @StaffID, @LoanDate, @DueDate)",
+                        new SqlParameter("@MemberID", memberId),
+                        new SqlParameter("@CopyID", copyId),
+                        new SqlParameter("@StaffID", staffId),
+                        new SqlParameter("@LoanDate", loanDate),
+                        new SqlParameter("@DueDate", dueDate));
+
+                    DatabaseHelper.ExecuteNonQuery(conn, trans,
+                        "UPDATE BookCopy SET Status = 'On Loan' WHERE CopyID = @CopyID",
+                        new SqlParameter("@CopyID", copyId));
+                });
+
+                MessageBox.Show("Book issued successfully.", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                LoadAvailableCopies();
+                LoadCurrentLoans();
+                LoadFilteredLoans();
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error issuing book: {ex.Message}", "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            if (dgvCurrentLoans.CurrentRow == null)
+            {
+                MessageBox.Show("Select an active loan to return.", "Validation",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                int loanId = Convert.ToInt32(dgvCurrentLoans.CurrentRow.Cells["LoanID"].Value);
+                int copyId = Convert.ToInt32(dgvCurrentLoans.CurrentRow.Cells["CopyID"].Value);
+
+                DatabaseHelper.ExecuteTransaction((conn, trans) =>
+                {
+                    DatabaseHelper.ExecuteNonQuery(conn, trans,
+                        "UPDATE Loan SET ReturnDate = @ReturnDate WHERE LoanID = @LoanID AND ReturnDate IS NULL",
+                        new SqlParameter("@ReturnDate", DateTime.Today),
+                        new SqlParameter("@LoanID", loanId));
+
+                    DatabaseHelper.ExecuteNonQuery(conn, trans,
+                        "UPDATE BookCopy SET Status = 'Available' WHERE CopyID = @CopyID",
+                        new SqlParameter("@CopyID", copyId));
+                });
+
+                MessageBox.Show("Book returned successfully.", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                LoadAvailableCopies();
+                LoadCurrentLoans();
+                LoadFilteredLoans();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error returning book: {ex.Message}", "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadComboBoxes();
+            LoadCurrentLoans();
+            LoadFilteredLoans();
+        }
+    }
+}

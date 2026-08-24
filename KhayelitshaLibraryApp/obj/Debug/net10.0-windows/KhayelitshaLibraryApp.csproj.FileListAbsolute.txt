@@ -1,0 +1,165 @@
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.exe
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.deps.json
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.runtimeconfig.json
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.pdb
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Bcl.Cryptography.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Data.SqlClient.Extensions.Abstractions.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Data.SqlClient.Internal.Logging.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.csproj.AssemblyReference.cache
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.AssemblyInfoInputs.cache
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.AssemblyInfo.cs
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.csproj.CoreCompileInputs.cache
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.sourcelink.json
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\Khayelit.2EC2D8D8.Up2Date
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\refint\KhayelitshaLibraryApp.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.pdb
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.genruntimeconfig.cache
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\ref\KhayelitshaLibraryApp.dll
+c:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.exe.config
+c:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.dll.config
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.exe.config
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.exe
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.dll.config
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.deps.json
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.runtimeconfig.json
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.pdb
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Bcl.Cryptography.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Data.SqlClient.Extensions.Abstractions.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Data.SqlClient.Internal.Logging.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.csproj.AssemblyReference.cache
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.AssemblyInfoInputs.cache
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.AssemblyInfo.cs
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.csproj.CoreCompileInputs.cache
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.sourcelink.json
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\Khayelit.2EC2D8D8.Up2Date
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\refint\KhayelitshaLibraryApp.dll
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.pdb
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.genruntimeconfig.cache
+C:\Users\Luan\OneDrive\Documents\Klas\4de jaar\S2\FA\FA 2\A\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\ref\KhayelitshaLibraryApp.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.exe.config
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.exe
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.dll.config
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.deps.json
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.runtimeconfig.json
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\KhayelitshaLibraryApp.pdb
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Bcl.Cryptography.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Data.SqlClient.Extensions.Abstractions.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Data.SqlClient.Internal.Logging.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\bin\Debug\net10.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.csproj.AssemblyReference.cache
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.AssemblyInfoInputs.cache
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.AssemblyInfo.cs
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.csproj.CoreCompileInputs.cache
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.sourcelink.json
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\Khayelit.2EC2D8D8.Up2Date
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\refint\KhayelitshaLibraryApp.dll
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.pdb
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\KhayelitshaLibraryApp.genruntimeconfig.cache
+C:\Users\Luan\OneDrive\Desktop\20231069_Luan_Frey_MDB622_FA2_Project\KhayelitshaLibraryApp\KhayelitshaLibraryApp\obj\Debug\net10.0-windows\ref\KhayelitshaLibraryApp.dll

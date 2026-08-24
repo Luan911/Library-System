@@ -1,0 +1,252 @@
+﻿namespace KhayelitshaLibraryApp
+{
+    public class MainForm : Form
+    {
+        private MenuStrip menuStrip;
+        private ToolStripMenuItem menuFile;
+        private ToolStripMenuItem menuExit;
+        private ToolStripMenuItem menuNavigation;
+        private ToolStripMenuItem menuMembers;
+        private ToolStripMenuItem menuBooks;
+        private ToolStripMenuItem menuLoans;
+        private ToolStripMenuItem menuReports;
+        private Panel panelHeader;
+        private Label lblTitle;
+        private Label lblSubtitle;
+        private Label lblLearner;
+        private Panel panelNav;
+        private Button btnMembers;
+        private Button btnBooks;
+        private Button btnLoans;
+        private Button btnReports;
+        private Label lblWelcome;
+
+        public MainForm()
+        {
+            InitializeComponent();
+        }
+
+        private void InitializeComponent()
+        {
+            menuStrip = new MenuStrip();
+            menuFile = new ToolStripMenuItem();
+            menuExit = new ToolStripMenuItem();
+            menuNavigation = new ToolStripMenuItem();
+            menuMembers = new ToolStripMenuItem();
+            menuBooks = new ToolStripMenuItem();
+            menuLoans = new ToolStripMenuItem();
+            menuReports = new ToolStripMenuItem();
+            panelHeader = new Panel();
+            lblTitle = new Label();
+            lblSubtitle = new Label();
+            lblLearner = new Label();
+            panelNav = new Panel();
+            btnMembers = new Button();
+            btnBooks = new Button();
+            btnLoans = new Button();
+            btnReports = new Button();
+            lblWelcome = new Label();
+            menuStrip.SuspendLayout();
+            panelHeader.SuspendLayout();
+            panelNav.SuspendLayout();
+            SuspendLayout();
+
+            menuStrip.Items.AddRange(new ToolStripItem[] { menuFile, menuNavigation });
+            menuStrip.Location = new Point(0, 0);
+            menuStrip.Name = "menuStrip";
+            menuStrip.Size = new Size(900, 24);
+            menuStrip.TabIndex = 0;
+
+            menuFile.DropDownItems.AddRange(new ToolStripItem[] { menuExit });
+            menuFile.Name = "menuFile";
+            menuFile.Size = new Size(37, 20);
+            menuFile.Text = "File";
+
+            menuExit.Name = "menuExit";
+            menuExit.Size = new Size(93, 22);
+            menuExit.Text = "Exit";
+            menuExit.Click += menuExit_Click;
+
+            menuNavigation.DropDownItems.AddRange(new ToolStripItem[] { menuMembers, menuBooks, menuLoans, menuReports });
+            menuNavigation.Name = "menuNavigation";
+            menuNavigation.Size = new Size(77, 20);
+            menuNavigation.Text = "Navigate";
+
+            menuMembers.Name = "menuMembers";
+            menuMembers.Size = new Size(180, 22);
+            menuMembers.Text = "Members";
+            menuMembers.Click += menuMembers_Click;
+
+            menuBooks.Name = "menuBooks";
+            menuBooks.Size = new Size(180, 22);
+            menuBooks.Text = "Books";
+            menuBooks.Click += menuBooks_Click;
+
+            menuLoans.Name = "menuLoans";
+            menuLoans.Size = new Size(180, 22);
+            menuLoans.Text = "Loans / Returns";
+            menuLoans.Click += menuLoans_Click;
+
+            menuReports.Name = "menuReports";
+            menuReports.Size = new Size(180, 22);
+            menuReports.Text = "Reports";
+            menuReports.Click += menuReports_Click;
+
+            panelHeader.BackColor = Color.FromArgb(41, 53, 65);
+            panelHeader.Controls.Add(lblTitle);
+            panelHeader.Controls.Add(lblSubtitle);
+            panelHeader.Controls.Add(lblLearner);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(0, 24);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(900, 120);
+            panelHeader.TabIndex = 1;
+
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.White;
+            lblTitle.Location = new Point(24, 16);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(430, 37);
+            lblTitle.Text = "Khayelitsha Community Library";
+
+            lblSubtitle.AutoSize = true;
+            lblSubtitle.Font = new Font("Segoe UI", 10F);
+            lblSubtitle.ForeColor = Color.FromArgb(200, 210, 220);
+            lblSubtitle.Location = new Point(28, 58);
+            lblSubtitle.Name = "lblSubtitle";
+            lblSubtitle.Size = new Size(280, 19);
+            lblSubtitle.Text = "Library Management System — FA Project";
+
+            lblLearner.AutoSize = true;
+            lblLearner.Font = new Font("Segoe UI", 9F);
+            lblLearner.ForeColor = Color.FromArgb(180, 190, 200);
+            lblLearner.Location = new Point(28, 86);
+            lblLearner.Name = "lblLearner";
+            lblLearner.Size = new Size(350, 15);
+            lblLearner.Text = "Learner: Luan | Student No: [Your Number] | Module: FA";
+
+            panelNav.Controls.Add(btnMembers);
+            panelNav.Controls.Add(btnBooks);
+            panelNav.Controls.Add(btnLoans);
+            panelNav.Controls.Add(btnReports);
+            panelNav.Controls.Add(lblWelcome);
+            panelNav.Dock = DockStyle.Fill;
+            panelNav.Location = new Point(0, 144);
+            panelNav.Name = "panelNav";
+            panelNav.Padding = new Padding(40);
+            panelNav.Size = new Size(900, 406);
+            panelNav.TabIndex = 2;
+
+            btnMembers.BackColor = Color.FromArgb(52, 152, 219);
+            btnMembers.FlatAppearance.BorderSize = 0;
+            btnMembers.FlatStyle = FlatStyle.Flat;
+            btnMembers.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnMembers.ForeColor = Color.White;
+            btnMembers.Location = new Point(60, 100);
+            btnMembers.Name = "btnMembers";
+            btnMembers.Size = new Size(180, 70);
+            btnMembers.TabIndex = 0;
+            btnMembers.Text = "Members";
+            btnMembers.UseVisualStyleBackColor = false;
+            btnMembers.Click += btnMembers_Click;
+
+            btnBooks.BackColor = Color.FromArgb(46, 204, 113);
+            btnBooks.FlatAppearance.BorderSize = 0;
+            btnBooks.FlatStyle = FlatStyle.Flat;
+            btnBooks.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnBooks.ForeColor = Color.White;
+            btnBooks.Location = new Point(260, 100);
+            btnBooks.Name = "btnBooks";
+            btnBooks.Size = new Size(180, 70);
+            btnBooks.TabIndex = 1;
+            btnBooks.Text = "Books";
+            btnBooks.UseVisualStyleBackColor = false;
+            btnBooks.Click += btnBooks_Click;
+
+            btnLoans.BackColor = Color.FromArgb(155, 89, 182);
+            btnLoans.FlatAppearance.BorderSize = 0;
+            btnLoans.FlatStyle = FlatStyle.Flat;
+            btnLoans.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnLoans.ForeColor = Color.White;
+            btnLoans.Location = new Point(460, 100);
+            btnLoans.Name = "btnLoans";
+            btnLoans.Size = new Size(180, 70);
+            btnLoans.TabIndex = 2;
+            btnLoans.Text = "Loans / Returns";
+            btnLoans.UseVisualStyleBackColor = false;
+            btnLoans.Click += btnLoans_Click;
+
+            btnReports.BackColor = Color.FromArgb(230, 126, 34);
+            btnReports.FlatAppearance.BorderSize = 0;
+            btnReports.FlatStyle = FlatStyle.Flat;
+            btnReports.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnReports.ForeColor = Color.White;
+            btnReports.Location = new Point(660, 100);
+            btnReports.Name = "btnReports";
+            btnReports.Size = new Size(180, 70);
+            btnReports.TabIndex = 3;
+            btnReports.Text = "Reports";
+            btnReports.UseVisualStyleBackColor = false;
+            btnReports.Click += btnReports_Click;
+
+            lblWelcome.AutoSize = true;
+            lblWelcome.Font = new Font("Segoe UI", 11F);
+            lblWelcome.ForeColor = Color.FromArgb(60, 60, 60);
+            lblWelcome.Location = new Point(60, 40);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new Size(380, 20);
+            lblWelcome.Text = "Select a module below or use the Navigate menu.";
+
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(245, 246, 250);
+            ClientSize = new Size(900, 550);
+            Controls.Add(panelNav);
+            Controls.Add(panelHeader);
+            Controls.Add(menuStrip);
+            MainMenuStrip = menuStrip;
+            Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Khayelitsha Community Library";
+            menuStrip.ResumeLayout(false);
+            menuStrip.PerformLayout();
+            panelHeader.ResumeLayout(false);
+            panelHeader.PerformLayout();
+            panelNav.ResumeLayout(false);
+            panelNav.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        private void btnMembers_Click(object sender, EventArgs e)
+        {
+            using var form = new MemberForm();
+            form.ShowDialog();
+        }
+
+        private void btnBooks_Click(object sender, EventArgs e)
+        {
+            using var form = new BookForm();
+            form.ShowDialog();
+        }
+
+        private void btnLoans_Click(object sender, EventArgs e)
+        {
+            using var form = new LoanForm();
+            form.ShowDialog();
+        }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            using var form = new ReportsForm();
+            form.ShowDialog();
+        }
+
+        private void menuMembers_Click(object sender, EventArgs e) => btnMembers_Click(sender, e);
+        private void menuBooks_Click(object sender, EventArgs e) => btnBooks_Click(sender, e);
+        private void menuLoans_Click(object sender, EventArgs e) => btnLoans_Click(sender, e);
+        private void menuReports_Click(object sender, EventArgs e) => btnReports_Click(sender, e);
+        private void menuExit_Click(object sender, EventArgs e) => Close();
+    }
+}

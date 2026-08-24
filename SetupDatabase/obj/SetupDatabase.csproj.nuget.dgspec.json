@@ -1,0 +1,18 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Luan\\OneDrive\\Desktop\\Library System\\KhayelitshaLibraryApp\\SetupDatabase\\SetupDatabase.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Luan\\OneDrive\\Desktop\\Library System\\KhayelitshaLibraryApp\\SetupDatabase\\SetupDatabase.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Luan\\OneDrive\\Desktop\\Library System\\KhayelitshaLibraryApp\\SetupDatabase\\SetupDatabase.csproj",
+        "projectPath": "C:\\Users\\Luan\\OneDrive\\Desktop\\Library System\\KhayelitshaLibraryApp\\SetupDatabase\\SetupDatabase.csproj",
+        "packagesPath": "",
+        "outputPath": "C:\\Users\\Luan\\OneDrive\\Desktop\\Library System\\KhayelitshaLibraryApp\\SetupDatabase\\obj\\",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false
+      }
+    }
+  }
+}

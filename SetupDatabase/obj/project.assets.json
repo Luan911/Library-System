@@ -1,0 +1,26 @@
+{
+  "version": 3,
+  "targets": {},
+  "libraries": {},
+  "projectFileDependencyGroups": {},
+  "packageFolders": {
+    "": {}
+  },
+  "project": {
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Luan\\OneDrive\\Desktop\\Library System\\KhayelitshaLibraryApp\\SetupDatabase\\SetupDatabase.csproj",
+      "projectPath": "C:\\Users\\Luan\\OneDrive\\Desktop\\Library System\\KhayelitshaLibraryApp\\SetupDatabase\\SetupDatabase.csproj",
+      "packagesPath": "",
+      "outputPath": "C:\\Users\\Luan\\OneDrive\\Desktop\\Library System\\KhayelitshaLibraryApp\\SetupDatabase\\obj\\",
+      "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to read project information for 'SetupDatabase': '...' is not a valid version string."
+    }
+  ]
+}

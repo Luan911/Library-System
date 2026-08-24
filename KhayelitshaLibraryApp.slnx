@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="KhayelitshaLibraryApp/KhayelitshaLibraryApp.csproj" />
+  <Project Path="SetupDatabase/SetupDatabase.csproj" />
+</Solution>
